@@ -24,7 +24,7 @@
                 <div class="up-head__left-side">
                     <div class="up-head__location">
                         <img src="{{ url_for('static', filename='img/header/location.png') }}" alt="loc">
-                        <select name="location" id="location">
+                        <select class="up-head__select" name="location" id="location">
                             <option value="Київ">Київ</option>
                             <option value="Київ">Чернігів</option>
                             <option value="Київ">Черкаси</option>
@@ -166,7 +166,6 @@
     </nav>
 
     <main class="content">
-
         <section class="content__offers offers">
             <div class="container">
                 <div class="offers__holder">
@@ -224,11 +223,82 @@
             </div>
         </section>
 
-        <section class="content__catalog">
-            <h2></h2>
+        <section class="content__catalog catalog">
+            <div class="container">
+                <h2 class="content__title">Піца</h2>
+
+                <div class="catalog__holder">
+                {% if data|length > 0 %}
+                    {% for arr in data %}
+                    <div class="catalog__item item-catalog">
+                        <img src={{ arr[0] }} alt="food">
+
+                        <div class="item-catalog__title">
+                            {{ arr[1] }}
+                        </div>
+
+                        <div class="item-catalog__desc">
+                            {{ arr[2] }}
+                        </div>
+
+                        <div class="item-catalog__holder">
+                            <div class="item-catalog__button">
+                                <button class="item-catalog__btn">Обрати</button>
+                            </div>
+                            <div class="item-catalog__prise">
+                                від {{ arr[3] }} ₴
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
         </section>
 
+        <section class="content__description description">
+            <div class="container">
+                <div class="description__holder">
+
+                    <div class="description__title">
+                        Доставка їжі до вашого міста!
+                    </div>
+
+                    <div class="description__desk">
+                        Замовляйте їжу онлайн і насолоджуйтесь її доставкою прямо до вашого дверей. Наша мета - зробити ваше харчування легким, швидким і смачним!
+                        Меню нашого закладу включає різноманітні кулінарні шедеври. Ви знайдете у нас все, що забажаєте: піци з різними начинками, соковиті стейки, свіжі морепродукти, салати зі свіжими овочами, смачні пасту та безліч інших страв. Наші кухарі майстерно готують кожну страву з використанням тільки найкращих інгредієнтів, щоб забезпечити вам неперевершений смак і задоволення від їжі.
+                        Ми розуміємо, що кожен клієнт має свої унікальні вподобання і дієтарні обмеження. Тому, ми пропонуємо великий вибір вегетаріанських, веганських та безглютенових страв, щоб кожен міг знайти щось смачне для себе. Ви можете також замовити напої, десерти та снеки, щоб задовольнити свої солодкі або солоні бажання.
+                        Наша команда з доставки працює швидко і надійно, щоб ваша їжа прибула свіжою і гарячою. Ми піклуємося про кожен деталь процесу доставки, щоб забезпечити вам зручність і задоволення. Ви можете замовити їжу онлайн через наш сайт або за допомогою нашого мобільного додатку. Просто оберіть бажані страви, вкажіть адресу доставки і чекайте нашого кур'єра.
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__holder">
+
+                <div class="footer__item item__footer grid-f-1">
+
+                </div>
+
+                <div class="footer__item item__footer grid-f-2">
+
+                </div>
+
+                <div class="footer__item item__footer grid-f-3">
+
+                </div>
+
+                <div class="footer__item item__footer grid-f-4">
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
 </div>
 </body>
 </html>

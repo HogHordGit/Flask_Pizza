@@ -15,21 +15,21 @@ def debug(s):
 def get_db():
     return psycopg2.connect(
     host="localhost",
-    database="flask_app",
+    database="Pizza_flask",
     port=5433,
     user="testuser",
     password="1234"
     )
 
 ### Routes
-@app.route("/browse", methods=['get', 'post'])
+@app.route("/pizza", methods=['get', 'post'])
 def browse():
     conn = get_db()
     cursor = conn.cursor()
-    cursor.execute('select id, date, title, content from entries order by date')
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from pizza')
     rowlist = cursor.fetchall()
     print(rowlist);
-    return render_template('browse.html', entries=rowlist)
+    return render_template('assets/index.html', data=rowlist)
 
 @app.route("/populate", methods=['get', 'post'])
 def populate_db():

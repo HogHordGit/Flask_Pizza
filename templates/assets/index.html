@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='icon/favicon.ico') }}" type="image/x-icon">
+
+    <!--    Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--    Styles-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Куди піца</title>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header__up-head up-head">
+                <div class="up-head__left-side">
+                    <div class="up-head__location">
+                        <img src="{{ url_for('static', filename='img/header/location.png') }}" alt="loc">
+                        <select name="location" id="location">
+                            <option value="Київ">Київ</option>
+                            <option value="Київ">Чернігів</option>
+                            <option value="Київ">Черкаси</option>
+                            <option value="Київ">Вінниця</option>
+                            <option value="Київ">Рівне</option>
+                        </select>
+                    </div>
+
+                    <div class="up-head__check-adr">
+                        Перевірити адресу
+                    </div>
+
+                    <div class="up-head__delivery">
+                        Середній час доставки*: <b>00:24:19</b>
+                    </div>
+                </div>
+                <div class="up-head__right-side">
+                    <div class="up-head__time-work">
+                        Час роботи з 11:00 до 23:00
+                    </div>
+                    <div class="up-head__login">
+                        <img class="up-head__login-img" src="{{ url_for('static', filename='img/header/account.png') }}"
+                             alt="loc">
+                        <div class="up-head__login-text">
+                            Увійти до акаунта
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__bottom-head bottom-head">
+
+                <div class="bottom-head__logo-body">
+                    <img class="up-head__logo-img" src="{{ url_for('static', filename='img/header/logo.png') }}"
+                         alt="loc">
+                    <div class="up-head__logo-text">
+                       <h1 class="up-head__title">Куди піца</h1>
+                    </div>
+                </div>
+
+                <div class="bottom-head__cart">
+                    <button class="bottom-head__button">
+                        <img class="up-head__logo-img"
+                             src="{{ url_for('static', filename='img/header/shopping_bag.png') }}" alt="loc">
+                        <div class="bottom-head__bag-text">
+                            0 ₴
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu">
+        <div class="container">
+            <div class="menu__content">
+
+                <div class="menu__item item-menu grid_m_1">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/fire.png') }}">
+                    </div>
+                    <span class="item-menu__text -red-text">
+                        Акції
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_2">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/pizza.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Піца
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_3">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sushi.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Суші
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_4">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/drink.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Напої
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_5">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/snacks.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Закуски
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_6">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/combo.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Комбо
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_7">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/dessert.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Десерти
+                    </span>
+                </div>
+
+                <div class="menu__item item-menu grid_m_8">
+                    <a href="#" class="item-menu__link"></a>
+                    <div class="item-menu__image">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sauce.png') }}">
+                    </div>
+                    <span class="item-menu__text">
+                        Соуси
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+
+        <section class="content__offers offers">
+            <div class="container">
+                <div class="offers__holder">
+
+                    <div class="offers__item item-offers grid_o_1 -cur-bg">
+                        <span class="item-offers__text">
+                            3 середні піци <br>
+                            від 600 грн
+                        </span>
+                    </div>
+
+                    <div class="offers__item item-offers grid_o_2 -an-bg">
+                        <span class="item-offers__text">
+                            Кешбек 10% на <br>
+                            самовивіз (доставка)
+                        </span>
+                    </div>
+
+                    <div class="offers__item item-offers grid_o_3 -cur-bg">
+                        <span class="item-offers__text">
+                            3 середні піци <br>
+                            від 600 грн
+                        </span>
+                    </div>
+
+                    <div class="offers__item item-offers grid_o_4 -an-bg">
+                        <span class="item-offers__text">
+                            Кешбек 10% на <br>
+                            самовивіз (доставка)
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content__check-adr check-adr">
+            <div class="container">
+                <div class="check-adr__holder">
+
+                    <div class="check-adr__item item-adr grid_r_1">
+                        <span class="item-adr__text">Проверить адрес доставки</span>
+                    </div>
+
+                    <div class="check-adr__item item-adr grid_r_2">
+                        <img src="{{ url_for('static', filename='img/adress/adr_icon.png') }}">
+                        <input class="item-adr__input" type="text" placeholder="Адреса">
+                    </div>
+
+                    <div class="check-adr__item item-adr -item-adr-flex grid_r_3">
+                        <button class="item-adr__button">Перевірить</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content__catalog">
+            <h2></h2>
+        </section>
+
+    </main>
+</div>
+</body>
+</html>

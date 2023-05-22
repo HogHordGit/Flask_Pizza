@@ -33,22 +33,26 @@ header {
 /* up-head */
 .up-head {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     height: 40px;
     background-color: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .up-head__left-side {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .up-head__right-side {
     display: flex;
     align-items: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .up-head__location {
@@ -75,6 +79,36 @@ header {
 
 .up-head__login-img {
     margin-bottom: 3px;
+}
+
+@media (max-width: 889px) {
+    .up-head {
+        padding-top: 10px;
+        height: 70px;
+        justify-content: center;
+    }
+    .up-head__left-side {
+        gap: 10px;
+    }
+    .up-head__right-side {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 437px) {
+    .up-head {
+        height: 140px;
+    }
+    .up-head__delivery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .up-head__right-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* bottom-head */
@@ -191,7 +225,7 @@ header {
     gap: 35px;
     padding: 0 35px;
     grid-template-areas: "r1 r2 r3";
-    grid-template-columns: 250px 1fr 150px;
+    grid-template-columns: .4fr 1fr .2fr;
 }
 
 .item-adr {
@@ -230,6 +264,7 @@ header {
     font-size: 16px;
     color: #ffffff;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* catalog */
@@ -255,17 +290,19 @@ header {
     font-size: 18px;
     font-weight: 500;
     margin-top: 10px;
+    height: 40px;
 }
 
 .item-catalog__desc {
     margin-top: 15px;
+    height: 65px;
 }
 
 .item-catalog__holder {
     display: flex;
-    margin-top: 30px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .item-catalog__btn {
@@ -315,9 +352,55 @@ header {
 
 /* footer */
 .footer {
+    padding: 30px 0;
     margin-top: 50px;
     background-color: #ffffff;
     height: 260px;
+}
+
+.footer__holder {
+    display: grid;
+    grid-template-areas: "f1 f2 f3 f4";
+    grid-template-columns: repeat(4, 1fr);
+    height: 200px;
+}
+
+.item-footer__copyright {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.item-footer__name {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.item-footer__logo-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-about__title, .item-help__title, .item-help__title  {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.item-about > :not(:last-child), .item-help > :not(:last-child), .item-contacts > :not(:last-child)  {
+    margin-bottom: 22px;
+}
+
+.item-contacts__number, .item-contacts__location, .item-contacts__facebook, .item-contacts__insta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-contacts__soc-media {
+    display: flex;
+    gap: 25px;
 }
 
 /* grid */
@@ -382,6 +465,26 @@ header {
 
 .grid_r_3 {
     grid-area: r3;
+}
+
+.grid-f-1 {
+    grid-area: f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.grid-f-2 {
+    grid-area: f2;
+}
+
+.grid-f-3 {
+    grid-area: f3;
+}
+
+.grid-f-4 {
+    grid-area: f4;
 }
 
 /* custom */

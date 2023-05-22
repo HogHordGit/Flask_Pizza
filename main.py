@@ -21,12 +21,28 @@ def get_db():
     password="1234"
     )
 
+conn = get_db()
+cursor = conn.cursor()
+
 ### Routes
 @app.route("/pizza", methods=['get', 'post'])
-def browse():
-    conn = get_db()
-    cursor = conn.cursor()
+@app.route("/", methods=['get', 'post'])
+def pizza_page():
     cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from pizza')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
+@app.route("/sushi", methods=['get', 'post'])
+def sushi_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from sushi')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
+@app.route("/drinks", methods=['get', 'post'])
+def drinks_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from drink')
     rowlist = cursor.fetchall()
     print(rowlist);
     return render_template('assets/index.html', data=rowlist)
@@ -53,10 +69,6 @@ def init_db():
     conn.commit()
     print("Initialized the database.")
     return render_template("con_db.html")
-
-@app.route("/")
-def main():
-    return render_template("assets/index.html")
 
 ### Start flask
 if __name__ == "__main__":

@@ -24,17 +24,15 @@
                 <div class="up-head__left-side">
                     <div class="up-head__location">
                         <img src="{{ url_for('static', filename='img/header/location.png') }}" alt="loc">
-                        <select class="up-head__select" name="location" id="location">
-                            <option value="Київ">Київ</option>
-                            <option value="Київ">Чернігів</option>
-                            <option value="Київ">Черкаси</option>
-                            <option value="Київ">Вінниця</option>
-                            <option value="Київ">Рівне</option>
-                        </select>
-                    </div>
-
-                    <div class="up-head__check-adr">
-                        Перевірити адресу
+                        <div class="up-head__wrapper">
+                            <select class="up-head__select" name="location" id="location">
+                                <option value="Київ">Київ</option>
+                                <option value="Київ">Чернігів</option>
+                                <option value="Київ">Черкаси</option>
+                                <option value="Київ">Вінниця</option>
+                                <option value="Київ">Рівне</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="up-head__delivery">
@@ -85,7 +83,7 @@
                 <div class="menu__item item-menu grid_m_1">
                     <a href="#" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/fire.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/fire.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text -red-text">
                         Акції
@@ -95,7 +93,7 @@
                 <div class="menu__item item-menu grid_m_2">
                     <a href="/pizza" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/pizza.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/pizza.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Піца
@@ -103,9 +101,9 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_3">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/sushi" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sushi.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sushi.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Суші
@@ -113,9 +111,9 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_4">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/drinks" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/drink.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/drink.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Напої
@@ -125,7 +123,7 @@
                 <div class="menu__item item-menu grid_m_5">
                     <a href="#" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/snacks.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/snacks.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Закуски
@@ -135,7 +133,7 @@
                 <div class="menu__item item-menu grid_m_6">
                     <a href="#" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/combo.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/combo.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Комбо
@@ -145,7 +143,7 @@
                 <div class="menu__item item-menu grid_m_7">
                     <a href="#" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/dessert.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/dessert.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Десерти
@@ -155,7 +153,7 @@
                 <div class="menu__item item-menu grid_m_8">
                     <a href="#" class="item-menu__link"></a>
                     <div class="item-menu__image">
-                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sauce.png') }}">
+                        <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sauce.png') }}" alt="icon">
                     </div>
                     <span class="item-menu__text">
                         Соуси
@@ -207,16 +205,16 @@
                 <div class="check-adr__holder">
 
                     <div class="check-adr__item item-adr grid_r_1">
-                        <span class="item-adr__text">Проверить адрес доставки</span>
+                        <span class="item-adr__text">Перевірити адресу доставки</span>
                     </div>
 
                     <div class="check-adr__item item-adr grid_r_2">
-                        <img src="{{ url_for('static', filename='img/adress/adr_icon.png') }}">
+                        <img src="{{ url_for('static', filename='img/adress/adr_icon.png') }}" alt="icon">
                         <input class="item-adr__input" type="text" placeholder="Адреса">
                     </div>
 
                     <div class="check-adr__item item-adr -item-adr-flex grid_r_3">
-                        <button class="item-adr__button">Перевірить</button>
+                        <button class="item-adr__button">Перевірити</button>
                     </div>
 
                 </div>
@@ -280,20 +278,72 @@
         <div class="container">
             <div class="footer__holder">
 
-                <div class="footer__item item__footer grid-f-1">
-
+                <div class="footer__item item-footer grid-f-1">
+                    <div class="item-footer__logo-body">
+                        <div class="item-footer__logo">
+                            <img src="{{ url_for('static', filename='img/header/logo.png') }}" alt="icon">
+                        </div>
+                        <div class="item-footer__name">
+                            Куди піца
+                        </div>
+                    </div>
+                    <div class="item-footer__copyright">
+                        © Copyright 2023 — Куди Пица
+                    </div>
                 </div>
 
-                <div class="footer__item item__footer grid-f-2">
-
+                <div class="footer__item item-footer grid-f-2">
+                    <div class="item-footer__about item-about">
+                        <div class="item-about__title">
+                            Куди піца
+                        </div>
+                        <p class="item-about__par">Про компанію</p>
+                        <p class="item-about__par">Користувача угода</p>
+                        <p class="item-about__par">Умови гарантії</p>
+                    </div>
                 </div>
 
-                <div class="footer__item item__footer grid-f-3">
-
+                <div class="footer__item item-footer grid-f-3">
+                    <div class="item-footer__help item-help">
+                        <div class="item-help__title">
+                            Допомога
+                        </div>
+                        <p class="item-help__par">Ресторан</p>
+                        <p class="item-help__par">Контакты</p>
+                        <p class="item-help__par">Підтримка</p>
+                        <p class="item-help__par">Відстежити замовлення</p>
+                    </div>
                 </div>
 
-                <div class="footer__item item__footer grid-f-4">
+                <div class="footer__item item-footer grid-f-4">
+                    <div class="item-footer__contacts item-contacts">
 
+                        <div class="item-help__title">
+                            Контакти
+                        </div>
+
+                        <div class="item-contacts__number">
+                            <img src="{{ url_for('static', filename='img/footer/phone.png') }}" alt="icon">
+                            <span class="item-contacts__pg-num">+38 043 456 43 23</span>
+                        </div>
+
+                        <div class="item-contacts__location">
+                            <img src="{{ url_for('static', filename='img/header/location.png') }}" alt="icon">
+                            <span class="item-contacts__loc-text">Київ, Хрещатик 24а</span>
+                        </div>
+
+                        <div class="item-contacts__soc-media">
+                            <div class="item-contacts__facebook">
+                                <img src="{{ url_for('static', filename='img/footer/facebook.png') }}" alt="icon">
+                                <span>Facebook</span>
+                            </div>
+                            <div class="item-contacts__insta">
+                                <img src="{{ url_for('static', filename='img/footer/insta.png') }}" alt="icon">
+                                <span>Instagram</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>

@@ -1,3 +1,28 @@
+delete from prom;
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (1, 'https://drive.google.com/uc?export=view&id=13WDGaIktC1QoUeqIzMUZkwJ3HKh0IPZ-', 'Чікен солодкий чилі', 'Курица, Цибуля, Перец Халапеньо, Сыр Моцарелла, Томатный соу...', 150.00, 'Моцарела, огірки мариновані, папероні, томатний соус', 'моцарела, шампіньйони, красний лук, сладкий перець');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (2, 'https://drive.google.com/uc?export=view&id=1saGXLB_m8vAwi1NX_z222CsXuaGpruai', 'EASY PEASY огірковий розковбас', 'Курка, Цибуля, Перець Халапеньо...', 200, 'Моцарела, огірки мариновані, папероні, томатний соус', 'моцарела, шампіньйони, красний лук, сладкий перець');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (3, 'https://drive.google.com/uc?export=view&id=1tBU7HejWZoH7ac_W0YkEYxP3CvVv6I3L', 'Філадельфія кранч', 'Семга, рис, сир креметте, соус унаги, креветка, авокадо, чіп...', 200, 'Імбир, Васабі, Горіховий соус, Сєвий соус, Соус Унагі, Соус Спайс, Соус Кімчи', 'Імбир, Васабі, Горіховий соус, Сєвий соус, Соус Унагі, Соус Спайс, Соус Кімчи');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (4, 'https://drive.google.com/uc?export=view&id=1cBbIhc4pGuKr7mnU6uLdTuPbRAR2m87L', 'Філадельфія крем-брюле', 'Вершковий сир, сьомга татаки з тростинним цукром, соус у...', 160, 'Імбир, Васабі, Горіховий соус, Сєвий соус, Соус Унагі, Соус Спайс, Соус Кімчи', 'Імбир, Васабі, Горіховий соус, Сєвий соус, Соус Унагі, Соус Спайс, Соус Кімчи');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (5, 'https://drive.google.com/uc?export=view&id=1lNr5N4It5wARuvs1hxm8RDlCn9HQbSA6', 'Картопля Фрі', 'Жарена картопля у маслі зі спеціями', '50', 'Картопля, олія, спеції', 'Кетчуп, солодкий соус, сирний соус, соус із часником, кисло-солодкий соус');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (6, 'https://drive.google.com/uc?export=view&id=1kdjGA5eK5RnLVnwKOqCiIfgyfK4Hk3t3', 'Стріпси з курки', 'Жарена курка у маслі зі спеціями', '70', 'Курка, олія, спеції', 'Кетчуп, солодкий соус, сирний соус, соус із часником, кисло-солодкий соус');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (7, 'https://drive.google.com/uc?export=view&id=1KXmiosDAA9FUbbNxBAESWVXUoOsqfvKw', 'Печіво солодке', 'Печіво', '50', 'Печіво', 'Солодкий соус, шоколад');
+
+INSERT INTO prom (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (8, 'https://drive.google.com/uc?export=view&id=1ilDjL0m6tb28QYLG6tLX8F5ao_HmC4e7', 'Солодка сосиска в тісті', 'Сосика, булочка, солодкий сир', '50', 'Булочка, солодкий сир', 'Солодкий соус, вершки');
+
 delete from pizza;
 INSERT INTO pizza (id, image_link, dish_name, dish_description, price, ingredients, toppings)
 VALUES (1, 'https://drive.google.com/uc?export=view&id=1G1FZaElWV8U7ukNaBOfpWr33p736qBe5', 'Чікен солодкий чилі', 'Курица, Цибуля, Перец Халапеньо, Сыр Моцарелла, Томатный соу...', 200.00, 'Моцарела, огірки мариновані, папероні, томатний соус', 'моцарела, шампіньйони, красний лук, сладкий перець');

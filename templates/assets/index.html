@@ -224,7 +224,7 @@
         <section class="content__catalog catalog">
             <div class="container">
 
-                {% set first_tuple = ('http://192.168.1.30:8080/promotion', 'http://192.168.1.30:8080/pizza', 'http://192.168.1.30:8080/sushi', 'http://192.168.1.30:8080/drinks', 'http://192.168.1.30:8080/snacks', 'http://192.168.1.30:8080/combo', 'http://192.168.1.30:8080/desserts', 'http://192.168.1.30:8080/souces') %}
+                {% set first_tuple = ('http://192.168.1.30:8080/promotions', 'http://192.168.1.30:8080/pizza', 'http://192.168.1.30:8080/sushi', 'http://192.168.1.30:8080/drinks', 'http://192.168.1.30:8080/snacks', 'http://192.168.1.30:8080/combo', 'http://192.168.1.30:8080/desserts', 'http://192.168.1.30:8080/souces') %}
                 {% set second_tuple = ('Акції', 'Піца', 'Суші', 'Напої', 'Снекі', 'Комбо набори', 'Десерти', 'Соуси') %}
 
                 {% for index, element in custom_enumerate(first_tuple) %}
@@ -241,6 +241,11 @@
                 {% if data|length > 0 %}
                     {% for arr in data %}
                     <div class="catalog__item item-catalog">
+                    {% if request.url == 'http://192.168.1.30:8080/promotions' %}
+                        <div class="catalog__prom">
+                            Акція
+                        </div>
+                    {% endif %}
                         <img src={{ arr[0] }} alt="food">
 
                         <div class="item-catalog__title">

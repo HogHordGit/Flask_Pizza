@@ -32,6 +32,13 @@ conn = get_db()
 cursor = conn.cursor()
 
 ### Routes
+@app.route("/promotions", methods=['get', 'post'])
+def prom_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from prom')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
 @app.route("/pizza", methods=['get', 'post'])
 @app.route("/", methods=['get', 'post'])
 def pizza_page():

@@ -253,6 +253,21 @@ header {
     flex-direction: column;
     background-color: #ffffff;
     padding: 10px 20px 20px 20px;
+    position: relative;
+}
+
+.catalog__prom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    background-color: #f83636;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 5px 0 5px 0;
 }
 
 .item-catalog__title {

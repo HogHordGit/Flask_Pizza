@@ -61,6 +61,27 @@ def drinks_page():
     print(rowlist);
     return render_template('assets/index.html', data=rowlist)
 
+@app.route("/snacks", methods=['get', 'post'])
+def snacks_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from snacks')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
+@app.route("/combo", methods=['get', 'post'])
+def combo_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from combo')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
+@app.route("/desserts", methods=['get', 'post'])
+def desserts_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from dessert')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
 @app.route("/populate", methods=['get', 'post'])
 def populate_db():
     conn = get_db()

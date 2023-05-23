@@ -82,6 +82,13 @@ def desserts_page():
     print(rowlist);
     return render_template('assets/index.html', data=rowlist)
 
+@app.route("/souces", methods=['get', 'post'])
+def souces_page():
+    cursor.execute('select image_link, dish_name, dish_description, price, ingredients, toppings from souces')
+    rowlist = cursor.fetchall()
+    print(rowlist);
+    return render_template('assets/index.html', data=rowlist)
+
 @app.route("/populate", methods=['get', 'post'])
 def populate_db():
     conn = get_db()

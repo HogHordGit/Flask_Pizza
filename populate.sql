@@ -172,3 +172,28 @@ VALUES (7, 'https://drive.google.com/uc?export=view&id=1SQnih_V1bG2bqNYCLG7o2xMC
 
 INSERT INTO dessert (id, image_link, dish_name, dish_description, price, ingredients, toppings)
 VALUES (8, 'https://drive.google.com/uc?export=view&id=1G3bjMRjK6Fn4uXmu25MLCUQzY6f2EkgJ', 'Сирники', 'Сирники домашні, смачні', 200, '150, 100г, 200г, 500г, 1кг', '150, 100г, 200г, 500г, 1кг');
+
+delete from souces;
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (1, 'https://drive.google.com/uc?export=view&id=1CKAfHoscV-ium_KsbPOXE5tMuvgKJvTQ', 'Сирний соус', 'сирний смачний соус', 25, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (2, 'https://drive.google.com/uc?export=view&id=1rvvah8IwD-f-5s0JhzpAm5rGUWZjSt0d', 'Томатний соус', 'смачний та домашній кетчуп', 20, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (3, 'https://drive.google.com/uc?export=view&id=1rsgvFvG5K8J6eLferNsmTuUCfZC3-jci', 'Тартар', 'майонез з нотками консервованого огірка', 22, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (4, 'https://drive.google.com/uc?export=view&id=1JPL4F-pZsPzDEHKNEjAjVaLaKjtC21o9', 'Соус Аджика', 'домашня Аджика', 35, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (5, 'https://drive.google.com/uc?export=view&id=1gY1jYoY4KCG0d9B2yW4_BLg-Rsl3DFDL', 'Томатний соус', 'смачний та домашній кетчуп', 20, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (6, 'https://drive.google.com/uc?export=view&id=1nIBZcM25mtJPzEDyQRvPPLOSseGymfgD', 'Соус Аджика', 'домашня Аджика', 35, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (7, 'https://drive.google.com/uc?export=view&id=1Ikl_Geou_hSZIQOldG2nh2KWaQZ0DyFy', 'Тартар', 'майонез з нотками консервованого огірка', 22, 'Малий, Середній, Великий', 'Малий, Середній, Великий');
+
+INSERT INTO souces (id, image_link, dish_name, dish_description, price, ingredients, toppings)
+VALUES (8, 'https://drive.google.com/uc?export=view&id=1vcPuh_GwncHbf0_UymI2klR-JdQx8WYs', 'Сирний соус', 'сирний смачний соус', 25, 'Малий, Середній, Великий', 'Малий, Середній, Великий');

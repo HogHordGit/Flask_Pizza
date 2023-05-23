@@ -81,36 +81,6 @@ header {
     margin-bottom: 3px;
 }
 
-@media (max-width: 889px) {
-    .up-head {
-        padding-top: 10px;
-        height: 70px;
-        justify-content: center;
-    }
-    .up-head__left-side {
-        gap: 10px;
-    }
-    .up-head__right-side {
-        gap: 10px;
-    }
-}
-
-@media (max-width: 437px) {
-    .up-head {
-        height: 140px;
-    }
-    .up-head__delivery {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .up-head__right-side {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-}
-
 /* bottom-head */
 .bottom-head {
     height: 65px;
@@ -219,7 +189,6 @@ header {
     border-radius: 10px;
 }
 
-/* check-adr */
 .check-adr__holder {
     display: grid;
     gap: 35px;
@@ -504,4 +473,175 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1300px) {
+    .catalog__holder {
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .item-catalog {
+        width: auto;
+    }
+}
+
+@media (max-width: 1070px) {
+    .catalog__holder {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .check-adr__holder {
+        grid-template-areas: "r1 r1"
+                             "r2 r3";
+        grid-template-columns: 1fr 0.5fr;
+        margin-bottom: 80px;
+        gap: 10px;
+    }
+    .item-adr__text {
+        font-size: 22px;
+        font-weight: 500;
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 889px) {
+    .up-head {
+        padding-top: 10px;
+        height: 70px;
+        justify-content: center;
+    }
+    .up-head__left-side {
+        gap: 10px;
+    }
+    .up-head__right-side {
+        gap: 10px;
+    }
+    .menu__content {
+        grid-template-areas: "a1 a2 a3 a4"
+                             "a5 a6 a7 a8";
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .footer__holder {
+        grid-template-areas: "f4 f2"
+                             "f3 f1";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .footer {
+        height: 720px;
+    }
+    .item-footer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    .item-footer__name {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .offers__holder {
+        grid-template-areas: "o1 o2"
+                             "o3 o4";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .catalog {
+        margin-top: 100px;
+    }
+    .description__title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 730px) {
+    .catalog__holder {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .menu__content {
+        grid-template-areas: "a1 a2"
+                             "a3 a4"
+                             "a5 a6"
+                             "a7 a8";
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .item-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        height: 60px;
+    }
+    .check-adr__holder {
+        grid-template-areas: "r1"
+                             "r2"
+                             "r3";
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+        margin-bottom: 160px;
+    }
+    .footer__holder {
+        grid-template-areas: "f4"
+                             "f2"
+                             "f3"
+                             "f1";
+        grid-template-columns: 1fr;
+    }
+    .item-footer__logo-body, .item-about, .item-help, .item-contacts {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 450px) {
+    .offers__holder {
+        grid-template-areas: "o1"
+                             "o2"
+                             "o3"
+                             "o4";
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .item-offers {
+        height: 100px;
+        color: #000000;
+        font-weight: 800;
+    }
+    .catalog__item {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 437px) {
+    .up-head {
+        height: 140px;
+    }
+    .up-head__delivery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .up-head__right-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .check-adr__holder {
+        margin-bottom: 190px;
+    }
 }

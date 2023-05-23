@@ -1,5 +1,6 @@
-drop table if exists stock;
-CREATE TABLE stock (
+drop table if exists prom;
+
+CREATE TABLE prom (
     id serial primary key not null,
     image_link VARCHAR(255),
     dish_name VARCHAR(255),

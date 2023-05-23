@@ -5,7 +5,14 @@ import psycopg2
 app = Flask(__name__)
 app.static_folder = 'static'
 
+def enumerate(seq):
+    return zip(range(len(seq)), seq)
+
 ### Functions
+@app.template_global()
+def custom_enumerate(seq):
+    return enumerate(seq)
+
 def debug(s):
     """Prints a message to the screen (not web browser) 
     if FLASK_DEBUG is set."""

@@ -81,7 +81,7 @@
             <div class="menu__content">
 
                 <div class="menu__item item-menu grid_m_1">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/promotions" class="item-menu__link"></a>
                     <div class="item-menu__image">
                         <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/fire.png') }}" alt="icon">
                     </div>
@@ -121,7 +121,7 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_5">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/snacks" class="item-menu__link"></a>
                     <div class="item-menu__image">
                         <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/snacks.png') }}" alt="icon">
                     </div>
@@ -131,7 +131,7 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_6">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/combo" class="item-menu__link"></a>
                     <div class="item-menu__image">
                         <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/combo.png') }}" alt="icon">
                     </div>
@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_7">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/desserts" class="item-menu__link"></a>
                     <div class="item-menu__image">
                         <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/dessert.png') }}" alt="icon">
                     </div>
@@ -151,7 +151,7 @@
                 </div>
 
                 <div class="menu__item item-menu grid_m_8">
-                    <a href="#" class="item-menu__link"></a>
+                    <a href="/souces" class="item-menu__link"></a>
                     <div class="item-menu__image">
                         <img class="up-head__logo-img" src="{{ url_for('static', filename='img/menu/sauce.png') }}" alt="icon">
                     </div>
@@ -223,7 +223,19 @@
 
         <section class="content__catalog catalog">
             <div class="container">
-                <h2 class="content__title">Піца</h2>
+
+                {% set first_tuple = ('http://192.168.1.30:8080/promotion', 'http://192.168.1.30:8080/pizza', 'http://192.168.1.30:8080/sushi', 'http://192.168.1.30:8080/drinks', 'http://192.168.1.30:8080/snacks', 'http://192.168.1.30:8080/combo', 'http://192.168.1.30:8080/desserts', 'http://192.168.1.30:8080/souces') %}
+                {% set second_tuple = ('Акції', 'Піца', 'Суші', 'Напої', 'Снекі', 'Комбо набори', 'Десерти', 'Соуси') %}
+
+                {% for index, element in custom_enumerate(first_tuple) %}
+                    {% if request.url == element %}
+                        <h2 class="content__title">{{ second_tuple[index] }}</h2>
+                    {% endif %}
+                {% endfor %}
+
+                {% if request.url == 'http://192.168.1.30:8080/' %}
+                    <h2 class="content__title">Піца</h2>
+                {% endif %}
 
                 <div class="catalog__holder">
                 {% if data|length > 0 %}
